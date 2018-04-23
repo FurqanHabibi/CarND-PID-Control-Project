@@ -10,13 +10,13 @@ The D component is as important as the P component, and also shows visible effec
 ## How the final hyperparameters were chosen
 I started with the parameters found in the class quiz, which is 3.275, 0.0327, and 9.3 for P, I, D respectively. I then proceed to tune those parameters manually using educated guesswork.
 
-First I tune the P parameter, and found that increasing it resulted in the car overshoots too much. Then I decrease it iteratively until the car can pass several turns. But tuning only the P param doesn't make the car pass the whole circuit.
+First I tune the P parameter, and found that increasing it resulted in the car overshoots too much. Then I decrease it incrementally until the car can pass several turns. But tuning only the P param doesn't make the car pass the whole circuit.
 
-I then turn to D parameter for tuning. Increasing it resulted in the car become more centered on the road, so I decided to increase it iteratively. Increasing the D param while at the same time decreasing the P param resulted in the car successfully passing the whole circuit.
+I then turn to D parameter for tuning. Increasing it resulted in the car become more centered on the road, so I decided to increase it incrementally. Increasing the D param while at the same time decreasing the P param resulted in the car successfully passing the whole circuit.
 
 Then I turn to I param to see how it affects the car's behavior. Tuning it's value doesn't seem to change much of the car's behavior, so I decided to keep it at a small value.
 
-Finally, I tried to make the car run with higher velocity, so I increase the throttle value iteratively. Tuning the P, D, and throttle value furthermore resulted in the final parameter values as below.
+Finally, I tried to make the car run with higher velocity, so I increase the throttle value incrementally. Tuning the P, D, and throttle value furthermore resulted in the final parameter values as below.
 
 P | I | D | Throttle
 --- | --- | --- | ---
