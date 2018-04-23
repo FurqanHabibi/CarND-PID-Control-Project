@@ -36,7 +36,7 @@ int main()
   PID pid;
   // TODO: Initialize the pid variable.
   //pid.Init(0.5, 0.004, 10.0);
-  pid.Init(0.2, 0.005, 150.0);
+  pid.Init(0.2, 0.005, 100.0);
   //pid.Init(0.12, 0.005, 40.0);
 
   int frame = 0;
@@ -75,13 +75,10 @@ int main()
 
           json msgJson;
           msgJson["steering_angle"] = steer_value;
-          msgJson["throttle"] = 0.7;
+          msgJson["throttle"] = 0.65;
           auto msg = "42[\"steer\"," + msgJson.dump() + "]";
           //std::cout << msg << std::endl;
           ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);
-          if (frame % 100 == 0) {
-            std::cout << "Frame : " << frame << "; Avg error : " << pid.TotalError() / frame << std::endl;
-          }
         }
       } else {
         // Manual driving
