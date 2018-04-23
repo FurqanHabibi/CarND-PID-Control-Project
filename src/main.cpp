@@ -67,7 +67,7 @@ int main()
           */
           frame += 1;
           pid.UpdateError(cte);
-          steer_value = std::max(-1.0, std::min(1.0, -(pid.Kp * pid.p_error + pid.Kd * pid.d_error + pid.Ki * pid.i_error)));
+          steer_value = std::max(-1.0, std::min(1.0, pid.ControlValue()));
           //throttle = ((0.7 + 0.04) * (1 - std::abs(steer_value))) - 0.04;
           
           // DEBUG

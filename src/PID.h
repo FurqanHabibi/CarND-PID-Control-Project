@@ -41,6 +41,11 @@ public:
   * Calculate the total PID error.
   */
   double TotalError();
+
+  /*
+  * Calculate the control value
+  */
+  double ControlValue();
 };
 
 #endif /* PID_H */
